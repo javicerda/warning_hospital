@@ -30,7 +30,7 @@ export default {
       ...mapState(['currentPatient'])
   },
   methods:{
-      ...mapActions(['updateName', 'updateMail', 'postPatient']),
+      ...mapActions(['updateName', 'updateMail', 'postPatient', 'updatePatient']),
       submitForm(){
           if(this.currentPatient.id) {
           // si tiene id, llama a la función que actualiza los datos
