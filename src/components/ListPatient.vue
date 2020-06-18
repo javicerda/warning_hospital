@@ -2,7 +2,7 @@
     <div>
         <h1>lista</h1>
         <ul>
-            <li :key='patient.id' v-for='patient in patients'> {{patient.data.name}} || {{patient.data.Mail}}</li>
+            <li v-for='patient in patients' :key='patient.id'> {{patient.data.name}} || {{patient.data.Mail}}</li>
         </ul>
     </div>
 </template>
