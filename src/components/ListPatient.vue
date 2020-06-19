@@ -1,14 +1,29 @@
 <template>
-    <div>
-        <h1>lista</h1>
-        <ul>
-            <li v-for='patient in patients' :key='patient.id'> {{patient.data.name}} || {{patient.data.Mail}}
-              <v-btn text @click="removePatient(patient.id)">
-                <v-icon>mdi-delete</v-icon> </v-btn>
-                <v-btn text @click="editPatient(patient.id)">
-                <v-icon>mdi-pencil</v-icon> </v-btn>  
-            </li>
-        </ul>
+    <div class="mt-15">
+        <h1 class="text-center">Listado de pacientes</h1>
+        <v-simple-table class="mx-16 mt-10">
+            <template v-slot:default>
+            <thead>
+                <tr>
+                <th class="text-left">Nombre</th>
+                <th class="text-left">Mail</th>
+                <th class="text-left">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for='patient in patients' :key='patient.id'>
+                <td>{{patient.data.name}}</td>
+                <td>{{patient.data.Mail}}</td>
+                <td>
+                    <v-btn fab dark small color="red" class="mx-3" @click="removePatient(patient.id)">
+                    <v-icon>mdi-delete</v-icon> </v-btn>
+                    <v-btn fab dark small color="primary" @click="editPatient(patient.id)">
+                    <v-icon>mdi-pencil</v-icon> </v-btn> 
+                </td>
+                </tr>
+            </tbody>
+            </template>
+        </v-simple-table>
     </div>
 </template>
 

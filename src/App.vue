@@ -6,25 +6,9 @@
       dark
     >
       <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
+     
+<v-toolbar-title><b> Warning Hospital </b></v-toolbar-title>
+</div>
       <v-spacer></v-spacer>
 
       <v-btn
@@ -32,17 +16,17 @@
         target="_blank"
         text
       >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
+        <v-icon>mdi-domain</v-icon>
       </v-btn>
     </v-app-bar>
 
     <v-content>
-      <list-patient/>
       <form-patient/>
+      <list-patient/>
               <v-overlay :value="overlay">
                 <v-progress-circular indeterminate size="64"></v-progress-circular>
               </v-overlay>
+
     </v-content>
   </v-app>
 </template>
